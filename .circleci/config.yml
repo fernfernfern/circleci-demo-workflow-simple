@@ -1,0 +1,15 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4-node
+    steps:
+      - checkout
+
+workflows:
+  version: 2
+
+  my_workflow:
+    jobs:
+      - build
